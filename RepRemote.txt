@@ -1,0 +1,79 @@
+## Ejercicio 1 RepRemote
+
+1. Crear un nuevo repositorio público en GitHub con el nombre libro-git.
+2. Añadirlo al repositorio local del libro.
+3. Mostrar todos los repositorios remotos configurados.
+
+~~~
+> cd libro
+> git remote add pepito https://github.com/joangonzalez123/Libro.git
+> git remote -v
+~~~ 
+
+## Ejercicio 2
+
+1. Añadir los cambios del repositorio local al repositorio remoto de GitHub.
+2. Acceder a GitHub y comprobar que se han subido los cambios mostrando el historial
+de versiones.
+
+~~~
+> git push -u pepito master
+> git remove -v
+~~~
+
+## Ejercicio 3
+
+1. Colaborar en el repositorio remoto libro-git de otro usuario.
+2. Clonar su repositorio libro-git.
+3. Añadir   el   fichero  autores.txt  que   contenga   el   nombre   del   usuario   y   su   correo
+electrónico.
+4. Añadir los cambios a la zona de intercambio temporal.
+5. Hacer un commit con el mensaje “Añadido autor.”
+6. Subir los cambios al repositorio remoto.
+
+~~~
+> cd ..
+> ls
+> git status
+> git clone https://github.com/Capuchinochino/Libro.git
+> ls -la
+> cd Libro
+> ls -la
+> git remote -v
+> vim autores.txt
+> ls -la
+> git status
+> git add .
+> git commit -m "Añado mi nombre a autores"
+> git log --oneline
+> git remote remove origin
+> git remote -v
+> git remote add Joan https://github.com/joangonzalez123/Libro.git
+> git remove -v
+> git push -f joan master
+~~~
+
+## Ejercicio 5
+
+1. Clonar el repositorio mcuevaseljust/EjerciciosGit
+2. Crea un repositorio en tu cuenta de GitHub, y sube el repositorio clonado con las
+soluciones de los diferentes ejercicios.
+3. Modifica   el   fichero   README.md,   indicando   tu   nombre   e   indica   la   dirección   del
+repositorio
+
+~~~
+> cd ..
+> git clone https://github.com/mcuevaseljust/EjerciciosGit.git
+> cd EjerciciosGit
+> vim RepRemote.txt
+> ls -la
+> git satatus
+> git add .
+> git commit -m "Añadidas soluciones de los diferentes ejercicios"
+> git log --oneline
+> git remote remove origin
+> git remote -v
+> git remote add Ejercicios https://github.com/joangonzalez123/Ejercicio-RepRemote.git
+> git remove -v
+> git push -f Ejercicios master
+~~~
